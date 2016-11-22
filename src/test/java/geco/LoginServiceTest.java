@@ -1,5 +1,6 @@
 package geco;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -12,9 +13,17 @@ import static org.junit.Assert.*;
  */
 public class LoginServiceTest {
 
-    String[] logins = {"ben","lea"};
-    ArrayList<String> loginsExistants = new ArrayList<String>();
-    LoginService ls = new LoginService(logins);
+    private String[] logins ;
+    private ArrayList<String> loginsExistants;
+    private LoginService ls;
+
+
+    @Before
+    public void setup(){
+        loginsExistants = new ArrayList<String>();
+        logins = new String[] {"ben","lea"};
+        ls = new LoginService(logins);
+    }
 
     @Test
     public void loginExists() throws Exception {
