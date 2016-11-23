@@ -34,7 +34,6 @@ public class LoginServiceTest {
     public void addLogin() throws Exception {
         ls.addLogin("theo");
         assertTrue(ls.loginExists("theo"));
-        // test
     }
 
     @Test
